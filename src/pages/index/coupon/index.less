@@ -1,0 +1,109 @@
+@import '~@/assets/css/theme.less';
+
+// 优惠卷背景色
+@coupon-backgroundcolor: fade(@theme-color, 70);
+
+@zigzag-circle-width: 20rpx;
+
+.coupon-container {
+  display: flex;
+}
+.coupon-wrapper {
+  display: flex;
+  overflow: visible;
+  padding: 32rpx;
+  white-space: nowrap;
+}
+.coupon-item {
+  flex-shrink: 0;
+  margin-right: 32rpx;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.coupon {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: 280rpx;
+  height: 120rpx;
+  color: #ffffff;
+  background-image: linear-gradient(to right, @coupon-backgroundcolor, fade(@theme-color, 90));
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    width: @zigzag-circle-width;
+    height: 100%;
+    background-size: @zigzag-circle-width @zigzag-circle-width; /* 一个repeat的大小 */
+    background-repeat: repeat-y;
+    background-image: radial-gradient(@page-background-color 6px, transparent 6px);
+    position: absolute;
+    top: 0;
+  }
+  &::before {
+    left: -@zigzag-circle-width / 2 - 2;
+  }
+  &::after {
+    right: -@zigzag-circle-width / 2 - 2;
+  }
+  icon {
+    position: absolute;
+    left: 20%;
+    top: 40rpx;
+    width: 320rpx;
+    height: 120rpx;
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: rotate(-30deg);
+  }
+  &-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-right: 2rpx dashed #ffffff;
+    width: 220rpx;
+    &::before {
+      .circle();
+      top: -10px;
+    }
+    &::after {
+      .circle();
+      bottom: -10px;
+    }
+
+    &__price {
+      font-size: 40rpx;
+      &::before {
+        content: '￥';
+      }
+    }
+    &__remark {
+      font-size: 20rpx;
+    }
+  }
+  &-right {
+    display: flex;
+    width: 60rpx;
+    font-size: 20rpx;
+    letter-spacing: 5rpx;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    writing-mode: vertical-rl;
+  }
+}
+
+.circle {
+  content: '';
+  position: absolute;
+  right: -9rpx;
+  display: block;
+  width: 16rpx;
+  height: 16rpx;
+  background-color: @page-background-color;
+  border-radius: 50%;
+  z-index: 11;
+}
