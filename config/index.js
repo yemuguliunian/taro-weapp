@@ -66,7 +66,9 @@ const config = {
     '@/context': path.resolve(__dirname, '..', 'src/context'),
     '@/models': path.resolve(__dirname, '..', 'src/models'),
     '@/pages': path.resolve(__dirname, '..', 'src/pages'),
-    '@/utils': path.resolve(__dirname, '..', 'src/utils')
+    '@/utils': path.resolve(__dirname, '..', 'src/utils'),
+    react: 'nervjs',
+    'react-dom': 'nervjs'
   },
   // 解决无法打包微信小程序 sitemap.json
   copy: {

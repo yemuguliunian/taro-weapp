@@ -1,7 +1,7 @@
 @import '~@/assets/css/theme.less';
 
 // 优惠卷背景色
-@coupon-backgroundcolor: fade(@theme-color, 70);
+@coupon-backgroundcolor: fade(@primary-color, 70);
 
 @zigzag-circle-width: 20rpx;
 
@@ -29,7 +29,7 @@
   width: 280rpx;
   height: 120rpx;
   color: #ffffff;
-  background-image: linear-gradient(to right, @coupon-backgroundcolor, fade(@theme-color, 90));
+  background-image: linear-gradient(to right, @coupon-backgroundcolor, fade(@primary-color, 90));
   &::before,
   &::after {
     content: '';

@@ -5,7 +5,7 @@ import dva from '@/utils/dva';
 import models from '@/models';
 import './app.less';
 
-import ThemeContext from '@/context/theme-context';
+import ThemeContext from '@/context/themeContext';
 
 // 注册 dva
 const dvaApp = dva.createApp({
@@ -17,7 +17,13 @@ const store = dvaApp.getStore();
 class App extends Component {
   // 全局配置
   config = {
-    pages: ['pages/index/index', 'pages/mall/index', 'pages/cart/index', 'pages/mine/index'],
+    pages: [
+      'pages/index/index',
+      'pages/mall/index',
+      'pages/cart/index',
+      'pages/mine/home/index',
+      'pages/mine/about/index'
+    ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
@@ -48,7 +54,7 @@ class App extends Component {
           selectedIconPath: 'assets/images/icon/tabBar/cart-selected.png'
         },
         {
-          pagePath: 'pages/mine/index',
+          pagePath: 'pages/mine/home/index',
           text: '我的',
           iconPath: 'assets/images/icon/tabBar/mine.png',
           selectedIconPath: 'assets/images/icon/tabBar/mine-selected.png'
@@ -56,8 +62,6 @@ class App extends Component {
       ]
     }
   };
-
-  componentDidMount() {}
 
   render() {
     return (

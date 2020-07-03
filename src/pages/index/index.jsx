@@ -4,7 +4,7 @@ import Cell from '@/components/cell';
 import Coupon from './coupon';
 
 import { connect } from '@tarojs/redux';
-import ThemeContext from '@/context/theme-context';
+import ThemeContext from '@/context/themeContext';
 
 import './index.less';
 import 'taro-ui/dist/style/components/flex.scss';

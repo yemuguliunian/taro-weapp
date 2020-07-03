@@ -1,0 +1,48 @@
+@import '~@/assets/css/theme.less';
+
+page {
+  background-color: @page-background-color;
+}
+
+.mine {
+  .banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 480rpx;
+    color: #ffffff;
+    background-image: linear-gradient(to right, #7686b8, #172991);
+    .name {
+      margin-top: 32rpx;
+    }
+    .at-avatar {
+      width: 180rpx;
+      height: 180rpx;
+      font-size: 48rpx;
+      line-height: 180rpx;
+    }
+    .wave {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      z-index: 99;
+      mix-blend-mode: screen;
+      height: 100rpx;
+    }
+  }
+
+  .shadow-warp {
+    box-shadow: 0px 10rpx 10rpx -10rpx fade(#bfbfbf, 20);
+    background-color: #ffffff;
+    .at-grid__flex {
+      height: 180rpx;
+    }
+  }
+
+  .menu-list {
+    margin-top: 32rpx;
+  }
+}

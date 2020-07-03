@@ -1,8 +1,8 @@
-import { Component } from '@tarojs/taro';
+import Taro, { Component } from '@tarojs/taro';
 import { View, Text } from '@tarojs/components';
 import './index.less';
 
-export default class List extends Component {
+export default class About extends Component {
   componentWillMount() {}
 
   componentDidMount() {}
@@ -14,13 +14,13 @@ export default class List extends Component {
   componentDidHide() {}
 
   config = {
-    navigationBarTitleText: '列表页'
+    navigationBarTitleText: '附近店铺'
   };
 
   render() {
     return (
-      <View className="list">
-        <Text>列表页</Text>
+      <View className="about">
+        <Text>Hello world!</Text>
       </View>
     );
   }

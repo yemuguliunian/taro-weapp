@@ -1,5 +1,4 @@
-import { View, Text, Icon } from '@tarojs/components';
-import { AtIcon } from 'taro-ui';
+import { View, Text } from '@tarojs/components';
 
 import 'taro-ui/dist/style/components/icon.scss';
 import './index.less';
