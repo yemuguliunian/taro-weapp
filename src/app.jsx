@@ -1,9 +1,10 @@
 import Taro, { Component } from '@tarojs/taro';
-import Index from '@/pages/index';
 import { Provider } from '@tarojs/redux';
 import dva from '@/utils/dva';
 import models from '@/models';
 import './app.less';
+
+import Index from '@/pages/index';
 
 import ThemeContext from '@/context/themeContext';
 
@@ -18,11 +19,11 @@ class App extends Component {
   // 全局配置
   config = {
     pages: [
+      'pages/mine/about/index',
       'pages/index/index',
       'pages/mall/index',
       'pages/cart/index',
-      'pages/mine/home/index',
-      'pages/mine/about/index'
+      'pages/mine/home/index'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -60,6 +61,11 @@ class App extends Component {
           selectedIconPath: 'assets/images/icon/tabBar/mine-selected.png'
         }
       ]
+    },
+    permission: {
+      'scope.userLocation': {
+        desc: '你的位置信息将用于小程序位置接口的效果展示'
+      }
     }
   };
 
