@@ -19,11 +19,11 @@ class App extends Component {
   // 全局配置
   config = {
     pages: [
-      'pages/mine/about/index',
       'pages/index/index',
       'pages/mall/index',
       'pages/cart/index',
-      'pages/mine/home/index'
+      'pages/mine/home/index',
+      'pages/mine/about/index'
     ],
     window: {
       backgroundTextStyle: 'light',
